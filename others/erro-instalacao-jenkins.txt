@@ -1,0 +1,39 @@
+Erro instalação jenkins
+
+vagrant@ubuntu-bionic:/vagrant/scripts$ sudo ./jenkins.sh 
+OK
+Hit:1 https://download.docker.com/linux/ubuntu bionic InRelease
+Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease              
+Hit:4 http://archive.ubuntu.com/ubuntu bionic InRelease                        
+Get:5 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Ign:3 https://pkg.jenkins.io/debian-stable binary/ InRelease                   
+Get:6 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:7 https://pkg.jenkins.io/debian-stable binary/ Release [2044 B]
+Get:8 https://pkg.jenkins.io/debian-stable binary/ Release.gpg [833 B]
+Ign:8 https://pkg.jenkins.io/debian-stable binary/ Release.gpg       
+Reading package lists... Done                                   
+W: GPG error: https://pkg.jenkins.io/debian-stable binary/ Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY FCEF32E745F2C3D5
+E: The repository 'http://pkg.jenkins.io/debian-stable binary/ Release' is not signed.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package jenkins is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'jenkins' has no installation candidate
+vagrant@ubuntu-bionic:/vagrant/scripts$ j
+
+-----------------------------------------------------
+
+Resolução
+
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+    /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+-----------------------------------------------------

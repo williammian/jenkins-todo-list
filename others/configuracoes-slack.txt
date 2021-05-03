@@ -1,0 +1,32 @@
+Configurações Slack
+
+Credential / Security
+
+Kind
+	Secret text
+	
+Secret
+	hxPwmfIMkZM5nsbVkIaAxxIG
+	
+ID
+	slack-token
+
+Description
+	slack-token
+
+
+
+------------------------------------------------
+
+
+Slack
+
+Workspace
+	williammian
+	
+Credential
+	slack-token
+	
+Default channel / member id
+	#pipeline-todolist
+	

@@ -1,0 +1,8 @@
+Integração contínua
+
+Vantagens da adoção de integração contínua no desenvolvimento de software
+
+Agregar todo o processo de construção de artefatos, controle de qualidade e entrega de software
+em um fluxo contínuo e transparente para todos os envolvidos.
+
+Diminuição do time to market na entrega do produto para o mercado.
